@@ -38,11 +38,11 @@ app.post('/', function(req, res)
 
         const jsonData = JSON.stringify(data);
 
-        const url = 'https://us2.api.mailchimp.com/3.0/lists/0937f2899d';
+        const url = 'https://us2.api.mailchimp.com/3.0/lists/9fbf3e92d1';
 
         const options =
           {
-              method: 'get',
+              method: 'post',
               auth: 'anyuser:407cb466f5361ac21dfa7ca0a9ac44ee-us2'
           };
 
@@ -52,12 +52,12 @@ app.post('/', function(req, res)
               {
                 console.log(JSON.parse(data));
                 console.log(response.statusCode);
-                if (response.statusCode == '200'){
-                  res.sendFile(__dirname + '/success.html');
-                }
-                else {
-                    res.sendFile(__dirname + '/failure.html');
-                }
+              //   if (response.statusCode == '200'){
+              //     res.sendFile(__dirname + '/success.html');
+              //   }
+              //   else {
+              //       res.sendFile(__dirname + '/failure.html');
+              //   }
               })
             })
 
